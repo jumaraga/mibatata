@@ -76,7 +76,7 @@ header img{
 }
 .header-button span{
     display: inline-block;/* no nos sirve poner una imagen en el background si el span tiene su display inicial que es inline */
-    background-image: url('./assets/icons/down-arrow.svg');
+    background-image: url('../assets/icons/down-arrow.svg');
     width: 13px;
     height: 8px; 
 }
@@ -99,7 +99,7 @@ main{
     width: 200px;
     height: 200px;
     margin: 0 auto;
-    background-image: url('./assets/img/Bitcoin.svg');
+    background-image: url('../assets/img/Bitcoin.svg');
     background-position: center;/* si es que la pantalla se agranda no se perdamos el centro de la imagen */
     background-repeat: no-repeat;/* si la imagen fuera má chica que el contenedor el navegador lo repetiria lo cual no queremos */
 }
@@ -189,10 +189,10 @@ main{
     background-repeat: no-repeat;
 }
 .currency-table-container .down{
-    background-image: url('./assets/icons/trending-down.svg');
+    background-image: url('../assets/icons/trending-down.svg');
 }
 .currency-table-container .up{
-    background-image: url('./assets/icons/trending-up.svg');
+    background-image: url('../assets/icons/trending-up.svg');
 }
 .currency-table--date{
     width: 200px;
@@ -217,7 +217,7 @@ main{
 }
 .product-detail__batataLogo{
     position:absolute;
-    background-image: url('./assets/icons/batata.svg');
+    background-image: url('../assets/icons/batata.svg');
     width: 40px;
     height: 25px;
     top: -10px;
@@ -256,7 +256,7 @@ main{
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-image: url('./assets/icons/clock.svg');
+    background-image: url('../assets/icons/clock.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -265,7 +265,7 @@ main{
     display:inline-block;
     width: 20px;
     height: 20px;
-    background-image: url('./assets/icons/eye.svg');
+    background-image: url('../assets/icons/eye.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -275,7 +275,7 @@ main{
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-image: url('./assets/icons/dollar-sign.svg');
+    background-image: url('../assets/icons/dollar-sign.svg');
     background-position: center;    
     background-repeat: no-repeat;
     background-size: cover;
@@ -284,7 +284,7 @@ main{
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-image: url('./assets/icons/check-circle.svg');
+    background-image: url('../assets/icons/check-circle.svg');
     background-position: center;    
     background-repeat: no-repeat;
     background-size: cover;
@@ -305,7 +305,7 @@ main{
 .bitcoin-img-container{
     width: 100%;
     height: 50vh;
-    background-image: url('./assets/img/bitcoinbaby2x.jpg');
+    background-image: url('../assets/img/bitcoinbaby2x.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -346,17 +346,19 @@ main{
 .plans-container--slider{ /* el amrgin nose puede utizar en los sections */ /* olvidar esto */
     position: relative;
     display: flex;
-    width: 70%;
-    height: 300px;
-    margin:0 auto;
-    margin-top: 50px;
+    width: 100%;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: proximity;
 }
 .plans-container--card{
-   position: relative;
-    min-width: 230px;
+   scroll-snap-align: center;
+    position: relative;
+    min-width: 190px;
     height: 250px ;
-    margin: 0 auto;
-   /* margin-top: 50px;*/
+    margin: 0 20px;
+    margin-top: 50px;
     background-color: var(--JustWhite);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
@@ -374,7 +376,7 @@ main{
 }
 .plans-info-container{
     margin-top: 30px;
-    height: 70%;
+    height: 50%;
 }
 .plan-card--price span{
     
@@ -394,4 +396,25 @@ main{
     font-size: 12px;
     line-height: 15px;
     color: #757575;
+}
+.plan-card--ca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 60px;
+    background-color: transparent;
+    border: #F7931A solid 2px;
+    border-radius: 3px;
+    margin: 0 auto;  
+    font-weight: bold;  
+}
+.plan-card--ca span{
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    background-image: url('../assets/icons/orange-right-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
