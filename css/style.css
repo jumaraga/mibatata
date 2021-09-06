@@ -20,6 +20,8 @@
     padding: 0;
     margin:0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 html{
     font-size: 62.5%;
@@ -209,6 +211,7 @@ main{
 }
 .main-product--detail{
     width: 100%;
+
     position: relative;  /* este position relative permite que el position bsolute de abajo tome como referencia a este contenedor */
     min-width: 320px;
     height: auto;
@@ -301,6 +304,7 @@ main{
     font-size: 1.4rem;  
     font-weight: 500;
     line-height: 1.8rem;
+    color: #808080;
 }
 .bitcoin-img-container{
     width: 100%;
@@ -321,7 +325,7 @@ main{
 }
 .main-plans-container{
     min-width: 288px;
-    max-width: 400px;
+    
     width:100%;
     height: auto;
     text-align: center;
@@ -350,7 +354,7 @@ main{
     height: 316px;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
-    scroll-snap-type: proximity;
+    scroll-snap-type: x proximity;
 }
 .plans-container--card{
    scroll-snap-align: center;
@@ -417,4 +421,20 @@ main{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+footer{
+    background-color: #F7931A;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+footer div{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a ,li{  font-size: 1.4rem;
+    margin-top: 10px;
+    color: var(--JustWhite);
 }
